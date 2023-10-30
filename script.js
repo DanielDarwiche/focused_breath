@@ -19,7 +19,6 @@ function breathAnimation() {
         text.innerText = 'Hold';
         text.style.color = 'orange';
         container.className = 'container grow';
-
         setTimeout(() => {
             text.innerText = 'Breathe out';
             text.style.color = 'white';
@@ -30,8 +29,5 @@ function breathAnimation() {
     }, breatheTime);
 }
 
-setInterval(breathAnimation, totalTime);
 
-//skall ändra till hold efter breathe out
-//skall ändra till lite längre secunder
-//input i hur många sekunder? 
+setInterval(breathAnimation, totalTime);
