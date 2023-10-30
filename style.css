@@ -2,19 +2,20 @@ h1 {
     font-size: 1.2rem;  
     opacity: 0.5;  
     text-shadow: 2px 2px 5px rgba(255, 255, 91, 0.7);
+    letter-spacing: 0.5rem;
   }
 #text {
-    font-size: 1.5rem;  
+    font-size: 1rem;  
     opacity: 0.9;  
+    letter-spacing: 0.3rem;
     color:#fefece;
-    letter-spacing: 0.5rem;
     text-shadow: 1px 1px 5px rgba(255, 255, 91, 0.7);
   }
 * {
     box-sizing: border-box;
   }
   body {
-    background: #224941 url('bilden.JPG') no-repeat center center/cover;
+    background: #e1ff87 url('bilden.JPG') no-repeat center center/cover;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
@@ -29,8 +30,9 @@ h1 {
     align-items: center;
     justify-content: center;
     margin: auto;
-    height: 280px;
-    width: 280px;
+    height: 180px;      
+     /* höjden och längden! */
+    width: 180px;
     position: relative;
     transform: scale(1);
   }
@@ -43,23 +45,26 @@ h1 {
     top: 0;
     left: 0;
     z-index: -1;
+    /* containern är satt, denna ska va 100%. top:0 left: 0,
+     så den är i mitten z index-1 om gradient circle är -2
+    */
   }
   .gradient-circle {
     background: conic-gradient(
-        #5b7494 0%,
-        #8e9ea5 40%,
-      #fdfcf1 40%,
-      #c0986d 60%,
-      #ffdfa7 60%,
-      #ffdfa7 100%
-    );
-    height: 300px;
-    width: 300px;
+        #5b7494 0%,         #8e9ea5 40%,
+      #fdfcf1 40%,       #c0986d 60%,
+      #ffdfa7 60%,       #ffdfa7 100%     );
+    height: 200px;
+    width: 200px;
     z-index: -2;
-    border-radius: 50%;
-    position: absolute;
     top: -10px;
     left: -10px;
+    /* höjden lite större samt bredd
+    top -10px och left för att inte börja på samma plats
+   z-index  behind the solid cirkle
+    */
+    border-radius: 50%;
+    position: absolute;
   }
   .pointer {
     background-color: #ffffff;
@@ -71,10 +76,12 @@ h1 {
   }
   .pointer-container {
     position: absolute;
+    /* top var den börjar samt left,  */
     top: -40px;
-    left: 140px;
-    width: 20px;
-    height: 190px;
+    left: 82px;
+    /* background-color:red; */
+    width: 23px;
+    height: 140px;
     animation: roterandecirkel 7.5s linear forwards infinite;
     transform-origin: bottom center;
   }

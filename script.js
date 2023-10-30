@@ -11,13 +11,19 @@ breathAnimation();
 
 function breathAnimation() {
     text.innerText = 'Breathe in';
+    text.style.color = 'white'; // Correct the color format by adding a '#' before the hex code
     container.className = 'container grow';
 
     setTimeout(() => {
         text.innerText = 'Hold';
+        text.style.color = 'orange'; // Correct the color format by adding a '#' before the hex code
+        container.className = 'container grow';
 
         setTimeout(() => {
             text.innerText = 'Breathe out';
+            text.style.color = 'white'; // Correct the color format by adding a '#' before the hex code
+            text.style.textShadow = '1px 1px 5px lightblue'; // Use correct property name 'textShadow'
+            container.className = 'container grow';
             container.className = 'container shrink';
         }, holdTime);
     }, breatheTime);
