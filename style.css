@@ -15,7 +15,7 @@ h1 {
     box-sizing: border-box;
   }
   body {
-    background: #e1ff87 url('bilden.JPG') no-repeat center center/cover;
+    background: #c9d7ff70  url('bilden.JPG') no-repeat center center/cover;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
