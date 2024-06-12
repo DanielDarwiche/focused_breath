@@ -1,5 +1,4 @@
-console.log('This is made thanks to Brad Traversy from Traversy Media : https://www.youtube.com/watch?v=l-1ZrU6avzI&list=PLillGF-RfqbbnEGy3ROiLWk7JMCuSyQtX&index=49');
-
+const counterElement = document.getElementById('counter');
 const container = document.getElementById('container');
 const text = document.getElementById('text');
 
@@ -7,7 +6,15 @@ const totalTime = 7500;
 const breatheTime = (totalTime / 5) * 2;
 const holdTime = totalTime / 5;
 
-breathAnimation();
+let counter = 100;
+
+function counterIncrementer() {
+    counterElement.innerText = counter;
+    counter--;
+    if (counter < 1) {
+        counter = 100;
+    }
+}
 
 function breathAnimation() {
     text.innerText = 'Breathe in';
@@ -29,5 +36,9 @@ function breathAnimation() {
     }, breatheTime);
 }
 
-
-setInterval(breathAnimation, totalTime);
+counterIncrementer();
+breathAnimation();
+setInterval(() => {
+    breathAnimation();
+    counterIncrementer();
+}, totalTime);

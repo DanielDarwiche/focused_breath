@@ -1,8 +1,9 @@
 h1 {
-    font-size: 1.2rem;  
+    font-size: 1.5rem;  
     opacity: 0.5;  
     text-shadow: 2px 2px 5px rgba(255, 255, 91, 0.7);
     letter-spacing: 0.5rem;
+    font-weight: 900;
   }
 #text {
     font-size: 1.3rem;  
@@ -30,10 +31,12 @@ h1 {
     align-items: center;
     justify-content: center;
     margin: auto;
-    height: 180px;       /* höjden och längden! */
+    height: 180px;       
     width: 180px;
     position: relative;
     transform: scale(1);
+    margin: 30%;
+
   }
   .circle {
     background-color: #0d161f;
@@ -44,9 +47,6 @@ h1 {
     top: 0;
     left: 0;
     z-index: -1;
-    /* containern är satt, denna ska va 100%. top:0 left: 0,
-     så den är i mitten z index-1 om gradient circle är -2
-    */
   }
   .gradient-circle {
     background: conic-gradient(
@@ -58,8 +58,6 @@ h1 {
     z-index: -2;
     top: -10px;
     left: -10px;
-    /* höjden lite större samt bredd top -10px och left för att inte 
-    börja på samma plats, z-index,behind the solid cirkle */
     border-radius: 50%;
     position: absolute;
   }
@@ -69,13 +67,12 @@ h1 {
     height: 20px;
     width: 20px;
     display: block;
-    box-shadow: 0 0 10px #fffb00; /* Lägg till ett gult ljus runt hela punkten */
+    box-shadow: 0 0 10px #fffb00;  
   }
   .pointer-container {
-    position: absolute;       /* top var den börjar samt left,  */
+    position: absolute;       
     top: -40px;
     left: 82px;   
-    /* background-color:red;  för testing  */
     width: 23px;
     height: 140px;
     animation: roterandecirkel 7.5s linear forwards infinite;
@@ -96,7 +93,6 @@ h1 {
     from {
       transform: scale(1);
     }
-  
     to {
       transform: scale(1.2);
     }
